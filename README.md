@@ -42,12 +42,9 @@ graph TD;
 | close_time |  | int | 3 | 1 |
 
 
-## Problems
-Here are some Problems you might fetch!
+## Troubleshooting
 
-##
-
-### Pywhatkit
+### Pywhatkit Errors
 
 #### **Error**
 ```py
@@ -58,6 +55,8 @@ pywhatkit.core.exceptions.CountryCodeException: Country Code Missing in Phone Nu
 
 This Error come up when you didn't enter the Country Code before the Number. Use the Country Code before the Phone Number, and this is how you will solve this error!
 
+##
+
 #### **Error**
 ```py
 Warning: Invalid Time Format!
@@ -67,6 +66,8 @@ Warning: Invalid Time Format!
 
 This error said what's wrong inside the message. To fix this Error you should just recheck the Time you've entered. Hours should be within `0 - 24` and Minutes should be within `0 - 60`.
 
+##
+
 #### **Error**
 ```py
 pywhatkit.core.exceptions.CallTimeException: Call Time must be Greater than Wait Time as WhatsApp Web takes some Time to Load!
@@ -75,6 +76,8 @@ pywhatkit.core.exceptions.CallTimeException: Call Time must be Greater than Wait
 **Solution**
 
 This shows when the time, you've entered is already past or less that 10/7 seconds
+
+##
 
 #### **Error**
 ```py
