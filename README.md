@@ -14,7 +14,7 @@ graph TD;
     rp["Recipient"]
     code-- Request -->lib;
     lib-- Request-->wp;
-    wp-- Response -->rp;
+    wp-- Message -->rp;
 ```
 
 ## Software Requirements
