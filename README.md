@@ -8,12 +8,17 @@ The program will prompt you to input the `Phone Number`, `Message`, `Time`. Afte
 ## How it works?
 ```mermaid
 graph TD;
+    phone["Phone Number"]
+    message["Message"]
+    time["Time"]
     code["Program"]
-    lib["Library"]
     wp["Whatsapp Web"]
     rp["Recipient"]
-    code-- Request -->lib;
-    lib-- Request-->wp;
+    
+    phone-- Input -->code;
+    message-- Input -->code;
+    time-- Input -->code;
+    code-- Request-->wp;
     wp-- Message -->rp;
 ```
 
