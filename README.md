@@ -64,7 +64,7 @@ Warning: Invalid Time Format!
 
 **Solution**
 
-This error said what's wrong inside the message. To fix this Error you should just recheck the Time you've entered. Hours should be within `0 - 24` and Minutes should be within `0 - 60`.
+This error said what's wrong inside the message. To fix this error you should just recheck the Time you've entered. Hours should be within `0 - 24` and minutes should be within `0 - 60`.
 
 ##
 
@@ -75,7 +75,7 @@ pywhatkit.core.exceptions.CallTimeException: Call Time must be Greater than Wait
 
 **Solution**
 
-This shows when the time, you've entered is already past or less that 10/7 seconds
+This shows when the time, you've entered is already past or less than 10/7 seconds
 
 ##
 
@@ -86,4 +86,4 @@ ValueError: sleep length must be non-negative
 
 **Solution**
 
-This error shows up when you the `wait_time` is used and less than `7` seconds.
+This error shows up when the `wait_time` is less than `7` seconds.
