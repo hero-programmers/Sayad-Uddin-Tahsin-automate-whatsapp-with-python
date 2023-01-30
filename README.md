@@ -30,7 +30,7 @@ graph TD;
 | :--: | :-----: | :---: |
 | pywhatkit | 5.4 | `pip install pywhatkit==5.4` |
 
-## `pywhatkit.sendwhatmsg` Arguments
+## `pywhatkit.sendwhatmsg` Parameters
 | Parameter | Description | Supported Type | Default | Example |
 | :--: | :-- | :---: | :---: | :---: |
 | phone_no | Recipient Number | str | Required | +8801234567890 |
@@ -53,7 +53,7 @@ pywhatkit.core.exceptions.CountryCodeException: Country Code Missing in Phone Nu
 
 **Solution**
 
-This Error come up when you didn't enter the Country Code before the Number. Use the Country Code before the Phone Number, and this is how you will solve this error!
+This error comes up when you didn't enter the Country Code before the Number. Use the Country Code before the Phone Number, and this is how you will solve this error!
 
 ##
 
@@ -86,6 +86,4 @@ ValueError: sleep length must be non-negative
 
 **Solution**
 
-This error come up when you used the `wait_time` which is lesser than `7` seconds.
-
-**NOTE**: *This Solution is self-made. According to some experiments it work!*
+This error shows up when you the `wait_time` is used and less than `7` seconds.
