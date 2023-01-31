@@ -20,3 +20,11 @@ class WhatsAppNotFoundException(Exception):
 
 class UserInputException(Exception):
     pass
+
+
+class TimeException(Exception):
+    pass
+
+
+class TabCloseException(Exception):
+    pass

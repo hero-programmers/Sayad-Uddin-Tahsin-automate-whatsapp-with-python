@@ -19,7 +19,7 @@ def close_tab(wait_time: int = 2) -> None:
     elif _system == "darwin":
         pyautogui.hotkey("command", "w")
     else:
-        raise Warning(f"{_system} not supported!")
+        raise exceptions.TabCloseException(f"System not supported!")
     pyautogui.press("enter")
 
 
@@ -106,7 +106,7 @@ def sendwhatmsg(
         return
 
     if time_hour not in range(25) or time_min not in range(60):
-        raise Warning("Invalid Time Format!")
+        raise exceptions.TimeException("Invalid Time Format!")
 
     current_time = time.localtime()
     left_time = datetime.strptime(

@@ -127,22 +127,23 @@ The Prompt:
 > >>>
 > ```
 
-### Warnings
+##
 
-#### **Warning - 1**
+#### **Error - 8**
 ```
-Warning: Invalid Time Format!
+exceptions.TimeException: Invalid Time Format!
 ```
 
 **Solution**
 
 This error said what's wrong inside the message. To fix this error you should just recheck the Time you've entered. Hours should be within `0 - 24` and minutes should be within `0 - 60`.
 
+
 ##
 
-#### **Warning - 2**
+#### **Error - 9**
 ```
-Warning: System not supported!
+exceptions.TabCloseException: System not supported!
 ```
 
 **Solution**
