@@ -33,27 +33,16 @@ graph TD;
 ## Module Requirement
 | Module | Version | `pip` Command |
 | :--: | :-----: | :---: |
-| pywhatkit | 5.4 | `pip install pywhatkit==5.4` |
-
-## `pywhatkit.sendwhatmsg` Parameters
-| Parameter | Description | Supported Type | Default | Example |
-| :--: | :-- | :---: | :---: | :---: |
-| phone_no | Recipient Number | str | Required | +8801234567890 |
-| message | Message that will be sent | str | Required | Hello |
-| time_hour | The Hour when the Message will be sent | int | Required | 18 |
-| time_min | The Minute when the Message will be sent | int | Required | 46 |
-| wait_time | The Time will be waited after the window open | int | 15 | 10 |
-| tab_close | If the Tab will be closed after sending Message | bool | False | True |
-| close_time |  | int | 3 | 1 |
+| PyAutoGUI | 0.9.53 | `pip install PyAutoGUI==0.9.53` |
 
 
 ## Troubleshooting
 
-### Pywhatkit Errors
+### Errors
 
-#### **Error**
-```py
-pywhatkit.core.exceptions.CountryCodeException: Country Code Missing in Phone Number!
+#### **Error - 1**
+```
+exceptions.CountryCodeException: Country Code Missing in Phone Number!
 ```
 
 **Solution**
@@ -62,8 +51,86 @@ This error comes up when you didn't enter the Country Code before the Number. Us
 
 ##
 
-#### **Error**
-```py
+#### **Error - 2**
+```
+exceptions.CallTimeException: Call Time must be Greater than Wait Time as WhatsApp Web takes some Time to Load!
+```
+
+**Solution**
+
+This shows when the wait time is Greater than the Remaining Time to send!
+
+##
+
+#### **Error - 3**
+```
+exceptions.WaitTimeException: Wait Time must be Greater than 7 Seconds!
+```
+
+**Solution**
+
+This error shows up when the `wait_time` is less than `7` seconds.
+
+##
+
+#### **Error - 4**
+```
+exceptions.WhatsAppNotFoundException: Seems the WhatsApp Web Window was closed or moved to another Tab!
+```
+
+**Solution**
+
+This error shows up when you close or move to another tab in the Browser and the Program unable to find the text box. By not doing anything when the window open will solve this issue!
+
+##
+
+#### **Error - 5**
+```
+exceptions.InvalidPhoneNumber: Invalid Phone Number.
+```
+
+**Solution**
+
+This error comes in when you enter a wrong Phone Number. Correcting the phone number will solve this error!
+
+##
+
+#### **Error - 6**
+```
+exceptions.UserInputException: Invalid Choice! Answer must be "Yes" or "No".
+```
+
+**Solution**
+
+This error shows up when you didn't enter "Yes" or "No" in the Input Prompt.
+
+The Prompt: 
+> ```
+> Do you want to send the message instantly? Options: Yes/No
+> >>>
+> ```
+
+##
+
+#### **Error - 7**
+```
+exceptions.UserInputException: Unable to identify Hour, Minute and Second! Please use the format: HH:MM:SS (Seconds are Optional)
+```
+
+**Solution**
+
+This error shows up when the program don't able to get the Desired Time (Hour, Minute and Second[Optional]) to send the message from the Input Prompt. By maintaining the format: `HH:MM:SS`, you'll able to solve the issue!
+
+The Prompt:
+> ```
+> Enter the desired time in 24 Hours. Format: HH:MM:SS (Seconds are Optional)
+> >>>
+> ```
+
+### Warnings
+
+#### **Warning - 1**
+```
 Warning: Invalid Time Format!
 ```
 
@@ -73,22 +140,20 @@ This error said what's wrong inside the message. To fix this error you should ju
 
 ##
 
-#### **Error**
-```py
-pywhatkit.core.exceptions.CallTimeException: Call Time must be Greater than Wait Time as WhatsApp Web takes some Time to Load!
+#### **Warning - 2**
+```
+Warning: System not supported!
 ```
 
 **Solution**
 
-This shows when the time, you've entered is already past or less than 10/7 seconds
+The Window Closing system (`tab_close` parameter) only works in `Windows`, `Linux` and `Darwin`. This error comes in when the Program fails to close the windows for the System Requirement!
 
-##
 
-#### **Error**
-```py
-ValueError: sleep length must be non-negative
-```
+#
 
-**Solution**
+Thank you! You've read all the instructions here!
 
-This error shows up when the `wait_time` is less than `7` seconds.
+By the way, a Star to this Repository would be awesome!
+
+> 31 January, 2023/Tahsin

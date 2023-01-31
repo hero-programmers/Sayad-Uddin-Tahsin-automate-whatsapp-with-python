@@ -1,1 +1,1 @@
-pywhatkit==5.4
+PyAutoGUI==0.9.53
